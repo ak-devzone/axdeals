@@ -58,16 +58,11 @@ app.use((err, req, res, next) => {
 // ─── Start server ────────────────────────────────────────
 const PORT = process.env.PORT || 5000;
 
-if (process.env.VERCEL !== '1') {
-  app.listen(PORT, () => {
-    console.log('\n🚀 AK Deals Hub — Starting server...');
-    console.log('──────────────────────────────────────');
-    console.log(`✅ API running at   → http://localhost:${PORT}`);
-    console.log(`🌐 Frontend runs at → http://localhost:5173`);
-    console.log(`🔑 Admin panel      → http://localhost:5173/admin/portal/login`);
-    console.log('──────────────────────────────────────\n');
-  });
-}
-
-// Export the app for Vercel Serverless Functions
-module.exports = app;
+app.listen(PORT, () => {
+  console.log('\n🚀 AK Deals Hub — Starting server...');
+  console.log('──────────────────────────────────────');
+  console.log(`✅ API running at   → http://localhost:${PORT}`);
+  console.log(`🌐 Frontend runs at → http://localhost:5173`);
+  console.log(`🔑 Admin panel      → http://localhost:5173/admin/portal/login`);
+  console.log('──────────────────────────────────────\n');
+});
