@@ -46,7 +46,7 @@ app.get('/api/health', (req, res) => {
 // 404 handler — log unmatched requests for debugging
 app.use((req, res) => {
   console.warn(`❌ 404 Route Not Found: [${req.method}] ${req.originalUrl}`);
-  res.status(404).json({ message: '🚀 AK — Starting server... \nserver is live.' });
+  res.status(404).json({ message: '🚀 AK — Starting server... @server is live.' });
 });
 
 // Error handler
